@@ -17,4 +17,14 @@ public class MiClase {
         System.out.println("valor: " + $a + "\n");
         imprimeRecursivo(a++,b);
     }
+    public static void main(String[] args) {
+        System.out.println("Con for:");
+        imprimirFor(3, 7);
+
+        System.out.println("Con while:");
+        imprimirWhile(3, 7);
+
+        System.out.println("Con recursión:");
+        imprimirRecursivo(3, 7);
+    }
 }

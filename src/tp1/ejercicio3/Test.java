@@ -8,6 +8,5 @@ public class Test {
         Profesor p2 = new Profesor("Roberto", "filip", "mfilip@gmail.com", "ing 1", "Informatica");
         Profesor p3 = new Profesor("Santa", "filip", "mfilip@gmail.com", "ing 3", "Sociales");
         System.out.println(a1.tusDatos());
-
     }
 }

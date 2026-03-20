@@ -7,6 +7,12 @@ public class Test {
         Profesor p1 = new Profesor("Martin", "filip", "mfilip@gmail.com", "ing 1", "Informatica");
         Profesor p2 = new Profesor("Roberto", "filip", "mfilip@gmail.com", "ing 1", "Informatica");
         Profesor p3 = new Profesor("Santa", "filip", "mfilip@gmail.com", "ing 3", "Sociales");
+
         System.out.println(a1.tusDatos());
+        System.out.println(a2.tusDatos());
+        System.out.println(p1.tusDatos());
+        System.out.println(p2.tusDatos());
+        System.out.println(p3.tusDatos());
+
     }
 }

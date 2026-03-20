@@ -1,8 +1,8 @@
 package tp1.ejercicio1;
 
-public class MiClase {
+public class Ejercicio1 {
     public static void imprimeFor(int a, int b){
-        for(i=a; i=b; i++){
+        for(int i=a; i=b; i++){
             System.out.println("valor: " + $i + "\n")
         }
     }

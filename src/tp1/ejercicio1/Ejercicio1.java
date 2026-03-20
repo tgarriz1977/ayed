@@ -15,7 +15,7 @@ public class Ejercicio1 {
     public static void imprimeRecursivo(int a, int b){
         if (a > b) return;
         System.out.println("valor: " + a);
-        imprimeRecursivo(++a,b);
+        imprimeRecursivo(a+1,b);
     }
     public static void main(String[] args) {
         System.out.println("Con for:");

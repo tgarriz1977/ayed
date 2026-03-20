@@ -6,5 +6,10 @@ public class MiClase {
             System.out.print("valor: " + $i + "\n")
         }
     }
-
+    public static void imprimeWhile(int a, int b){
+        while (a <= b){
+            System.out.print("valor: " + $a + "\n");
+            a++;
+        }
+    }
 }

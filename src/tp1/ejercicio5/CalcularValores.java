@@ -1,6 +1,5 @@
 package tp1.ejercicio5;
 
-import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Scanner;
 

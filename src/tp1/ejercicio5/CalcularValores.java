@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CalcularValores {
-    public double[] calcular(int[] valores) {
+    static int maxGlobal, minGlobal;
+    static double promGlobal;
+
+    public static double[] calcular(int[] valores) {
         int suma = 0;
         int max = valores[0];
         int min = valores[0];
@@ -30,7 +33,7 @@ public class CalcularValores {
         return resultados;
     }
 
-    public double[] calcularInteractuando() {
+    public static double[] calcularInteractuando() {
         Scanner s = new Scanner(System.in);
         ArrayList<Integer> temporal = new ArrayList<>();
         System.out.println("Ingresa los números del arreglo y finaliza ingresando una letra");
@@ -66,3 +69,29 @@ public class CalcularValores {
 
         return resultados;
     }
+
+    public static void calcularGlobal(){
+        Scanner s = new Scanner(System.in);
+        ArrayList<Integer> temporal = new ArrayList<>();
+        System.out.println("Ingrese los valores del arreglo y finelice presionando una letra");
+        while(s.hasNextInt()){
+            temporal.add(s.nextInt());
+        }
+        s.close();
+        int suma = 0;
+        int max = temporal.get(0);
+        int min = temporal.get(0);
+        for (int elem : temporal) {
+            suma = suma + elem;
+            if (max < elem) {
+                max = elem;
+            }
+            if (min > elem) {
+                min = elem;
+            }
+        }
+        minGlobal = min;
+        maxGlobal = max;
+        promGlobal = (double) suma / temporal.size();
+    }
+}

@@ -8,11 +8,20 @@ public class Test {
         Profesor p2 = new Profesor("Roberto", "filip", "mfilip@gmail.com", "ing 1", "Informatica");
         Profesor p3 = new Profesor("Santa", "filip", "mfilip@gmail.com", "ing 3", "Sociales");
 
-        System.out.println(a1.tusDatos());
-        System.out.println(a2.tusDatos());
-        System.out.println(p1.tusDatos());
-        System.out.println(p2.tusDatos());
-        System.out.println(p3.tusDatos());
+        Estudiante[] alumnos = new Estudiante[2];
+        Profesor[] profesores = new Profesor[3];
 
+        alumnos[0] = a1;
+        alumnos[1] = a2;
+        profesores[0] = p1;
+        profesores[1] = p2;
+        profesores[2] = p3;
+
+        for (Estudiante a : alumnos){
+            System.out.println(a.tusDatos());
+        }
+        for (Profesor p : profesores){
+            System.out.println(p.tusDatos());
+        }
     }
 }

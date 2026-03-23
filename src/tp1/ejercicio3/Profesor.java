@@ -44,11 +44,11 @@ public class Profesor {
     }
 
     public Profesor(String nombre, String apellido, String email, String catedra, String facultad) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.email = email;
-        this.catedra = catedra;
-        this.facultad = facultad;
+        this.setNombre(nombre);
+        this.setApellido(apellido);
+        this.setEmail(email);
+        this.setCatedra(catedra);
+        this.setFacultad(facultad);
     }
 
     public String tusDatos(){

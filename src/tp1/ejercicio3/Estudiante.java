@@ -43,11 +43,11 @@ public class Estudiante {
     }
 
     public Estudiante(String nombre, String direccion, String email, String comision, String apellido) {
-        this.nombre = nombre;
-        this.direccion = direccion;
-        this.email = email;
-        this.comision = comision;
-        this.apellido = apellido;
+        this.setNombre(nombre);
+        this.setDireccion(direccion);
+        this.setEmail(email);
+        this.setComision(comision);
+        this.setApellido(apellido);
     }
 
     public String tusDatos(){

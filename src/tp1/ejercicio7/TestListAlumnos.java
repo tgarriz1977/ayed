@@ -32,7 +32,6 @@ public class TestListAlumnos {
         }
         lista.forEach(a -> System.out.println(a.tusDatos()));
 
-        List<Integer>
     }
 
 }

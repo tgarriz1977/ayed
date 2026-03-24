@@ -27,5 +27,13 @@ public class EjercicioRecursion {
         invertirArrayList(lista);
         lista.add(aux);
     }
-
+    public int sumarLinkedList(ArrayList<Integer> lista){
+        if (lista.size() <= 1) {
+            return (int) lista.get(0);
+        } else {
+            int suma = lista.get(0);
+            lista.remove(0);
+            return suma + sumarLinkedList(lista);
+        }
+    }
 }

@@ -15,7 +15,8 @@ public class TestRecursion {
         for(int i=0;i<=9;i++){
             lista.add(i);
         }
-        ej.invertirArrayList(lista);
+        //ej.invertirArrayList(lista);
         lista.forEach(a -> System.out.println(a));
+        System.out.println(ej.sumarLinkedList(lista));
     }
 }

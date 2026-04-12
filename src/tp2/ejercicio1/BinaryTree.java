@@ -1,5 +1,7 @@
 package tp2.ejercicio1;
+import Math;
 
+import java.lang.Math;
 
 
 public class BinaryTree <T> {
@@ -75,6 +77,14 @@ public class BinaryTree <T> {
 	public String toString() {
 		return this.getData().toString();
 	}
+	public int getAltura(){
+		int leftHeight = 0;
+		int rightHeight = 0;
+		if (this.isLeaf()) { return 0;}
+		if (this.hasLeftChild()) { leftHeight = this.getLeftChild().getAltura(); }
+		if (this.hasRightChild()) { rightHeight = this.getRightChild().getAltura(); }
+		return java.lang.Math.max(leftHeight,rightHeight) + 1 ;
+	}
 
 	public  int contarHojas() {
 		if (this.isEmpty()) { return 0;}
@@ -92,24 +102,22 @@ public class BinaryTree <T> {
 	}
 
     public BinaryTree<T> espejo(){
-		if (this.isEmpty()) { return null;}
-		if (this.isLeaf()) {
-			return this;
+		BinaryTree<T> btmirror = new BinaryTree<>(this.getData());
+		if (this.hasLeftChild()) {
+			btmirror.addRightChild(this.getLeftChild().espejo());
 		}
-		BinaryTree<T> res = new BinaryTree<>();
-		if ( this.hasLeftChild() && this.hasRightChild() ) {
-			BinaryTree<T> aux = this.getLeftChild();
-			res.setData(this.getData());
-			.addLeftChild(this.getRightChild());
-			this.addRightChild(aux);
+		if (this.hasRightChild()) {
+			btmirror.addLeftChild(this.getRightChild().espejo());
 		}
+		return btmirror;
+	}
 
 
-    }
 
 	// 0<=n<=m
 	public void entreNiveles(int n, int m){
-		
+
    }
+
 }
 

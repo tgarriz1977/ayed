@@ -77,6 +77,7 @@ public class BinaryTree <T> {
 	}
 
 	public  int contarHojas() {
+		if (this.isEmpty()) { return 0;}
 		if (this.isLeaf()){
 			return 1;
 		}
@@ -91,14 +92,24 @@ public class BinaryTree <T> {
 	}
 
     public BinaryTree<T> espejo(){
-		       		  
- 	   return null;
+		if (this.isEmpty()) { return null;}
+		if (this.isLeaf()) {
+			return this;
+		}
+		BinaryTree<T> res = new BinaryTree<>();
+		if ( this.hasLeftChild() && this.hasRightChild() ) {
+			BinaryTree<T> aux = this.getLeftChild();
+			res.setData(this.getData());
+			.addLeftChild(this.getRightChild());
+			this.addRightChild(aux);
+		}
+
+
     }
 
 	// 0<=n<=m
 	public void entreNiveles(int n, int m){
 		
    }
-		
 }
 
